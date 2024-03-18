@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Bootstrap 5 Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar per dispositivi mobili -->
+  <nav class="navbar navbar-expand-md navbar-light bg-dark d-md-none">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Bootstrap Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+      </button>
+      <div class="collapse navbar-collapse mt-4" id="mobileNav">
+        <!-- Elementi della Navbar qui -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Gli elementi della sidebar qui -->
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Sponsorizzazione</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Prodotti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Nuovo prodotto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Clienti</a>
+          </li>
+          <!-- Aggiungi altri link se necessario -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenitore Principale -->
+  <div class="container-fluid">
+    <div class="row">
+      
+      <!-- Sidebar per dispositivi grandi -->
+      <nav class="col-md-4 col-lg-3 d-none d-md-block bg-light sidebar bg-dark vh-100 position-fixed ">
+        <div class="position-sticky pt-3">
+        <a class="navbar-brand text-white" href="#">Bootstrap Dashboard</a>
+        <hr class="text-white">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white d-flex align-items-center" aria-current="page">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                </svg>
+                <span class="ps-3">
+    
+                  Dashboard
+    
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="./sponsorizations.html" class="nav-link active d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07" />
+                </svg>
+                <span class="ps-3">
+    
+                  Sponsorizzazione
+    
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="./products.html" class="nav-link text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-archive-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8z" />
+                </svg>
+                <span class="ps-3">
+    
+                  Prodotti
+    
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="./form.html" class="nav-link text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                </svg>
+                <span class="ps-3">
+    
+                  Nuovo prodotto
+    
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link text-white d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                </svg>
+                <span class="ps-3">
+    
+                  Clienti
+    
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div class="dropdown mt-5">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/alecaring.png" alt="" width="32" height="32" class="rounded-circle me-3">
+              <strong>
+    
+                Alessio Caringella
+    
+              </strong>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+              <li>
+                <a class="dropdown-item" href="#">
+    
+                  Ipostazioni
+    
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+    
+                  Profilo
+    
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">
+    
+                  Esci
+    
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Contenuto Principale -->
+      <main class="col-md-8 ms-sm-auto col-lg-9 px-md-5">
+
+
+        
+    <!-- todo: intestazioni pagina -->
+    <div class="container bg-light rounded mt-5 text-center w-100 pt-5 px-0">
+      <h1 class="fs-1 fw-bold mb-3">
+
+        Trova il piano perfetto per te!
+
+      </h1>
+      <div class="m-auto">
+        <p class="fs-4 text-secondary w-75 m-auto pb-4">
+
+          Scegli tra le nostre opzioni di abbonamento e goditi funzionalità esclusive e
+          performance migliori.
+
+        </p>
+
+      </div>
+      <p class="fw-bold mb-4 text-secondary">
+
+        Porta la tua esperienza al livello successivo!
+
+      </p>
+      <a class="btn btn-primary rounded-pill px-4 mb-4" href="#" role="button">
+
+        Scopri di più
+
+      </a>
+      <a class="btn btn-outline-secondary rounded-pill px-4 mb-4 text-secondary" href="#" role="button">
+
+        Contattaci
+
+      </a>
+      <!-- todo: pacchetti abbonamenti -->
+      <!-- contenitore -->
+      <div class="container mt-5">
+        <!-- riga -->
+        <div class="row d-flex justify-content-center">
+
+          <!-- conenitore gratis -->
+          <div class="col-md-12 col-lg-4 border rounded mb-5 p-0">
+            <div>
+              <h5 class="card-title border-bottom py-3 rounded-top bg-light">
+
+                Gratis
+
+              </h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <p class="fs-2 pt-4 text-secondary">
+                    <span class="fw-bold text-dark">
+
+                      € 0
+
+                    </span>
+
+                    /mese
+
+                  </p>
+                </li>
+                <li>
+                  <span>
+
+                    10 utenti
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    2 GB di spazio
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    Pubblicià
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    Supporto email
+
+
+                  </span>
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn-outline-primary w-75 mb-4">
+
+                Prosegui
+
+
+              </a>
+            </div>
+          </div>
+          <!-- conenitore premium -->
+          <div class="col-md-12 col-lg-4 border border-primary rounded mb-5 p-0">
+            <div class="card-body p-0">
+              <h5 class="card-title border-bottom py-3 bg-primary text-white rounded-top">
+
+                Premium
+
+              </h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <p class="fs-2 pt-4 text-secondary">
+                    <span class="fw-bold text-dark">
+
+                      € 15
+
+                    </span>
+
+                    /mese
+
+                  </p>
+                </li>
+                <li>
+                  <span class="fs-6">
+
+                    50 utenti
+
+                  </span>
+                </li>
+                <li>
+                  <span class="fs-6">
+
+                    10 GB di spazio
+
+                  </span>
+                </li>
+                <li>
+                  <span class="fs-6">
+
+                    Senza pubblicià
+
+                  </span>
+                </li>
+                <li>
+                  <span class="fs-6">
+
+                    Supporto email prioritario
+
+                  </span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-primary w-75 mb-4">
+
+                Prosegui
+
+              </a>
+            </div>
+          </div>
+          <!-- conenitore entreprise -->
+          <div class="col-md-12 col-lg-4 border rounded mb-5 p-0">
+            <div class="card-body p-0">
+              <h5 class="card-title border-bottom py-3 rounded-top bg-light">
+
+                Entreprise
+
+              </h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p class="fs-2 pt-4 text-secondary">
+                    <span class="fw-bold text-dark">
+
+                      € 29
+
+                    </span>
+
+                    /mese
+
+                  </p>
+                </li>
+                <li>
+                  <span>
+
+                    Utenti illimitati
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    Spazio illimitato
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    Senza pubblicià
+
+                  </span>
+                </li>
+                <li>
+                  <span>
+
+                    Supporto via email e chat
+
+                  </span>
+                </li>
+              </ul>
+              <a href="#" class="btn btn-primary w-75 mb-4">
+
+                Prosegui
+
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  
+        <!-- Il tuo contenuto qui -->
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
